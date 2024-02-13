@@ -182,24 +182,23 @@ public:
  
 // find method with key use by value parameter
  
-   Leaf<T> Find(const T& key) 
+     Leaf<T> Find(const T& key) 
 {
     if(m_this_node[::Last] == key) return m_this_node[::Last];
+    if(m_this_node[::Middle].is_valid() && m_this_node[::Middle] == key)
+        return m_this_node[::Middle];
     if(m_is_node)
     {
-        if(m_this_node[::Last] < key) return m_next_b->Find(key);
-        else
-        {
-            if(m_this_node[::Middle].is_valid() && m_this_node[::Middle] == key)
-            return m_this_node[::Middle];
-            else if(m_next_m && m_this_node[::Middle] < key) 
+        if(m_this_node[::Last] < key)   
+            return m_next_b->Find(key);
+        else if(m_next_m && m_this_node[::Middle] < key) 
             return m_next_m->Find(key);
-            else  return m_next_l->Find(key);
+        else    
+            return m_next_l->Find(key);
         }
     }
     return Leaf<T>() ;
 }
-
 // Clear method
 
 void reset()
