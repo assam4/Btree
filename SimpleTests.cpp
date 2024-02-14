@@ -61,12 +61,5 @@ int main()
     std::cout << " new Tree " << std::endl;
     NumbersTree.print(std::cout);
     
-
-
-
-
-
-
-
     return 0 ;
 }
