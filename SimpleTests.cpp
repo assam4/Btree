@@ -41,11 +41,12 @@ int main()
 {
     // Ascending range insert
     range_insert(Start_1,End_1);
-    std::cout << "Btree now have 0-299 elements" << std :: endl ;
+    std::cout << "Btree now have 0-2000 elements" << std :: endl ;
     // print Tree
     NumbersTree.print(std::cout);
      // checking for  first insertion
-    std::cout<< "Finding first 0-299 elements " << std::endl ;
+    std::cout<< "Finding first 0-2000
+        elements " << std::endl ;
     find_range(Start_1,End_1);
   
     // checking reset method
