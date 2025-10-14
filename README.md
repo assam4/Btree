@@ -3,7 +3,7 @@
 
 A modern C++20 B-Tree implementation featuring a sophisticated wrapper system for type-safe element management.
 
-## 🌟 Features
+##  Features
 
 - **Modern C++20** implementation with concepts and constraints
 - **Custom WrapperType** system for enhanced type safety
@@ -12,7 +12,7 @@ A modern C++20 B-Tree implementation featuring a sophisticated wrapper system fo
 - **Exception safe** operations with noexcept specifications
 - **Configurable order** B-Tree structure
 
-## 🚀 Quick Start
+##  Quick Start
 
 ```cpp
 #include "BTree.hpp"
